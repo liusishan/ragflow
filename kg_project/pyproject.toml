@@ -1,0 +1,19 @@
+[project]
+name = "kg-extractor"
+version = "0.1.0"
+description = "Standalone knowledge graph extraction service from text input."
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "fastapi>=0.115.12",
+  "networkx>=3.4.2",
+  "openai>=1.68.0",
+  "pydantic>=2.8.2",
+  "uvicorn>=0.34.3",
+]
+
+[project.scripts]
+kg-server = "kg_app:main"
+
+[tool.uv]
+package = false
